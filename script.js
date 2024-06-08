@@ -80,7 +80,7 @@ function clearCalculator() {
     firstOperand = null;
     operator = null;
     updateResult("0");
-    extraInfo.innerText = ""; // Limpa as informações extras
+    extraInfo.innerText = ""; 
 }
 
 function setPercentage() {
@@ -98,7 +98,7 @@ function setPercentage() {
     updateResult(currentNumber);
 }
 
-// Novas funções de cálculo
+
 
 function modulo() {
     if (currentNumber && firstOperand !== null) {
@@ -141,7 +141,7 @@ function mmc() {
     if (currentNumber && firstOperand !== null) {
         let num1 = Math.abs(firstOperand);
         let num2 = Math.abs(parseFloat(currentNumber));
-        let lcm = (num1 * num2) / mdcCalc(num1, num2); // Chamada correta para a função mdcCalc
+        let lcm = (num1 * num2) / mdcCalc(num1, num2); 
         let mmcResult = lcm.toString();
         console.log(`MMC de ${firstOperand} e ${currentNumber} = ${mmcResult}`);
         extraInfo.innerText = `MMC: ${mmcResult}`; 
